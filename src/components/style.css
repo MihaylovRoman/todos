@@ -1,0 +1,26 @@
+.taskCheck {
+    width: 24px;
+    height: 24px;
+    color: #000;
+}
+.taskWrapper img{
+    width: 35px;
+    height: 35px;
+}
+.taskWrapper{
+    height: 55px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 25px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    transition: .5s ease;
+    font-size: 25px;
+    color: #fff;
+}
+.completed{
+    background: rgba(0, 0, 0, 0.7);
+}
+
