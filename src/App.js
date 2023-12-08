@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Task from './components/Task';
+import Task from './components/Task/Task';
+import Menu from './components/Menu/Menu';
 
 function App() {
 	const [value, setValue] = useState('')
@@ -24,6 +25,8 @@ function App() {
 	}, [task])
 
 	return (
+		<>
+		<Menu/>
 		<div className="wrapper">
 			<form className='formTodo'>
 				<p>My ToDo List</p>
@@ -37,6 +40,7 @@ function App() {
 			</form>
 
 		</div>
+		</>
 	);
 }
 
