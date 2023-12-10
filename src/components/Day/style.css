@@ -1,4 +1,6 @@
 .wrapperDay {
+    display: flex;
+    justify-content: center;
     position: absolute;
     margin-left: 260px;
     height: 100%;
@@ -10,12 +12,12 @@
 .formTodo {
     position: absolute;
     bottom: 0;
-    display: flex;
     left: 20%;
     margin: 40px auto;
 }
 
 .inputValueWrapper {
+    margin-left: 15px;
     border-radius: 7px;
     height: 45px;
     width: 720px;
@@ -41,22 +43,85 @@
     border: 1px solid rgba(34, 165, 34, 0.9);
 }
 
-
 .inputValueWrapper input:hover {
     border: 1px solid rgba(34, 165, 34, 0.9)
 }
 
 .submitButton {
+    cursor: pointer;
     position: absolute;
     width: 35px;
     height: 35px;
     top: 5px;
-    left: 670px;
+    left: 685px;
 }
-.plusButton{
+
+.plusButton {
     position: absolute;
     width: 20px;
     height: 20px;
     top: 12px;
-    left: 15px;
+    left: 30px;
+}
+
+.taskManager {
+    width: 720px;
+}
+
+.Greetings {
+    margin-top: 50px;
+}
+
+.Greetings h2 {
+    margin: 10px;
+}
+
+.Greetings h2:nth-child(2) {
+    color: gray;
+}
+
+.calendarDay h2,
+h3 {
+    margin: 0;
+}
+
+.calendarDay h2 {
+    font-size: 40px;
+}
+
+.calendarDay h3:nth-child(1) {
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.calendarDay h3:nth-child(3) {
+    color: rgba(0, 0, 0, 0.2)
+}
+
+.calendarDay {
+    margin-top: 40px;
+    text-align: center;
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.taskWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    height: 550px;
+}
+
+.taskWindow::-webkit-scrollbar {
+    width: 5px;
+}
+
+.taskWindow::-webkit-scrollbar-track {
+    background: rgba(34, 130, 34, 0.1);
+}
+
+.taskWindow::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
 }
