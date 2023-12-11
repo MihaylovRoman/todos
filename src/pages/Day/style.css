@@ -14,6 +14,7 @@
     bottom: 0;
     left: 20%;
     margin: 40px auto;
+    
 }
 
 .inputValueWrapper {
@@ -108,9 +109,11 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 5px;
     overflow: auto;
     width: 100%;
-    height: 550px;
+    height: 500px;
+    
 }
 
 .taskWindow::-webkit-scrollbar {
@@ -124,4 +127,13 @@ h3 {
 .taskWindow::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 20px;
+}
+.lamp_day{
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+}
+a:visited, a{
+    text-decoration: none;
+    color: #000;
 }

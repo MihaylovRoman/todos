@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import Task from '../Task/Task';
+import Task from '../../components/Task/Task';
 import './style.css'
 const Day = () => {
     const [value, setValue] = useState('')
@@ -9,8 +9,17 @@ const Day = () => {
 
     const onSubmitForm = (e) => {
         e.preventDefault()
-        setTask([...task, value])
+        const newTask = {
+            id: Math.random().toString(36).substring(2, 9),
+            text: value,
+            complete: false
+        }
+        setTask([...task, newTask])
         setValue('')
+    }
+
+    const completeTask = (id) => {
+        setTask([...task.map((todo) => todo.id === id ? {...todo, complete: !todo.complete} : {...todo})])
     }
 
     const deleteTask = (id) => {
@@ -23,6 +32,7 @@ const Day = () => {
 
     return (
         <div className="wrapperDay">
+
             <div className='taskManager'>
                 <div className='Greetings'>
                     <h2>Доброе утро, username</h2>
@@ -37,10 +47,11 @@ const Day = () => {
                 </div>
                 <div className='taskWindow'>
                     {
-                        task ? task.map((todo, index) => <Task todo={todo} key={index} deleteTask={deleteTask} />) : ''
+                        task ? task.map((todo) => <Task completeTask={completeTask} todo={todo} key={todo.id} deleteTask={deleteTask} />) : ''
                     }
                 </div>
             </div>
+
             <form onSubmit={(e) => onSubmitForm(e)} className='formTodo'>
                 <div className='inputValueWrapper'>
                     <img className='plusButton' src='../../image/plus.png' alt='plus' />
@@ -48,6 +59,7 @@ const Day = () => {
                     <img className='submitButton' onClick={onSubmitForm} src='../../image/sendTask.png' alt='enterTask' />
                 </div>
             </form>
+
         </div>
     )
 }

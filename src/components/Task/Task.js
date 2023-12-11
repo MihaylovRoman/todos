@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
 import './style.css'
-const Task = ({ todo, deleteTask }) => {
-    const [active, setActive] = useState(false)
-    
+const Task = ({ todo, deleteTask, completeTask }) => {
+
     return (
-        <div className={`taskWrapper ${active ? 'completed' : ''}`}>
+        <div className={`taskWrapper ${todo.complete ? 'completed' : ''}`}>
             <div className='taskText'>
-                <input className='taskCheck' type='radio' onClick={() => setActive(!active)
-                } />
-                <p>{todo ? todo : 'Задача не установлена'}</p>
+                <input className='taskCheck' checked={todo.complete} type='radio' onClick={() => { completeTask(todo.id) }} />
+                <p>{todo.text ? todo.text : 'Задача не установлена'}</p>
             </div>
-            <img src='../../image/trash.png' onClick={() => {deleteTask(todo.id)
-            console.log(todo.id)}} alt='close' />
+            <img src='../../image/trash.png' onClick={() => deleteTask(todo.id)} alt='close' />
         </div>
     )
 }

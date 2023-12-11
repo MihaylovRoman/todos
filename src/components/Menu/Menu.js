@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import { NavLink } from 'react-router-dom'
 
 const Menu = () => {
     return (
@@ -13,18 +14,18 @@ const Menu = () => {
                 <button className='premiumBtn'>Go premium</button>
             </div>
             <main>
-                <div className='router'>
+                <NavLink className={({ isActive }) => isActive ? 'activeRouter router' : 'router'} to='/myday'>
                     <img src='../../image/clover.png' alt='myday' />
-                    <p>My day</p>
-                </div>
-                <div className='router'>
+                    My day
+                </NavLink>
+                <NavLink to='/next-seven-days' className={({ isActive }) => isActive ? 'activeRouter router' : 'router'}>
                     <img src='../../image/calendar.png' alt='7days' />
-                    <p>Next 7 days</p>
-                </div>
-                <div className='router'>
+                    Next 7 days
+                </NavLink>
+                <NavLink to='/AllTasks' className={({ isActive }) => isActive ? 'activeRouter router' : 'router'}>
                     <img src='../../image/calendar2.png' alt='myday' />
-                    <p>All task</p>
-                </div>
+                    All task
+                </NavLink>
             </main>
         </div>
 
