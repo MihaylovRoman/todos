@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const SevenDays = () => {
   return (
     <div>
