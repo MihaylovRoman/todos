@@ -1,0 +1,50 @@
+.wrapperSevenDays {
+    position: absolute;
+    margin-left: 260px;
+    height: 100%;
+    width: calc(100% - 260px);
+}
+
+.SevenDays__title {
+    height: 25px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 35px;
+    margin-left: 25px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 23%;
+}
+
+.SevenDays__title img,
+.SevenDays__title p {
+    margin: 0;
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+.SevenDays__title h3 {
+    margin: 0;
+    padding-right: 15px;
+    font-size: 19px;
+    border-right: 1px solid gray;
+}
+.SevenDays__title_dots{
+    cursor: pointer;
+    position: absolute;
+    left: 23%;
+    display: flex;
+    align-items: center;
+}
+.SevenDays__title_dot{
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 3px;
+    background: gray;
+    width: 4px;
+    height: 4px;
+}
+.SevenDays__title_dots:hover .SevenDays__title_dot{
+    background-color: rgba(34, 165, 34, 0.9);
+}

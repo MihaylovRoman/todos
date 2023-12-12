@@ -1,0 +1,17 @@
+.arrowback{
+    margin: 15px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+.positionProfile{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.imageAccount{
+    width: 80px;
+    height: 80px;
+}

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import SettingsAccount from '../SettingsAccount/SettingsAccount'
 
 const Menu = () => {
-    const [settingsAccount, setSettingsAccount] = useState(true)
+    const [settingsAccount, setSettingsAccount] = useState(false)
     return (
         <>
         <div className='menuWrapper'>
