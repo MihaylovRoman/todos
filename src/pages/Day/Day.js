@@ -3,6 +3,14 @@ import { useState, useEffect } from 'react'
 import Task from '../../components/Task/Task';
 import './style.css'
 const Day = () => {
+    let date = new Date()
+    const day = date.getDay()
+    const days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ']
+    const months = ["Январь", "Февраль", "Март",
+        "Апрель", "Май", "Июнь", "Июль", "Август",
+        "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+    ]
+    
     const [value, setValue] = useState('')
     const [task, setTask] = useState(localStorage.getItem('todos') ?
         JSON.parse(localStorage.getItem('todos')) : [])
@@ -19,7 +27,7 @@ const Day = () => {
     }
 
     const completeTask = (id) => {
-        setTask([...task.map((todo) => todo.id === id ? {...todo, complete: !todo.complete} : {...todo})])
+        setTask([...task.map((todo) => todo.id === id ? { ...todo, complete: !todo.complete } : { ...todo })])
     }
 
     const deleteTask = (id) => {
@@ -40,9 +48,9 @@ const Day = () => {
                 </div>
                 <div>
                     <div className='calendarDay'>
-                        <h3>SUN</h3>
-                        <h2>10</h2>
-                        <h3>December</h3>
+                        <h3>{days[day]}</h3>
+                        <h2>{date.getDate()}</h2>
+                        <h3>{months[date.getMonth()]}</h3>
                     </div>
                 </div>
                 <div className='taskWindow'>
